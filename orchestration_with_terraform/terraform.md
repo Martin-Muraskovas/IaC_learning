@@ -117,6 +117,12 @@ Notice that different providers require different information, AWS needs the reg
     Declare github as a provider and enter your PAT. Remember not to hardcode your PAT so use the principles outlined [here](https://github.com/Martin-Muraskovas/IaC_learning/blob/main/orchestration_with_terraform/terraform.md#keeping-your-terraform-files-secure) to safely provide your token to terraform.
 
     ```
+    provider "github" {
+
+    token = var.GITHUB_TOKEN
+
+    }
+  
     resource "github_repository" "automated_repo" {
     name        = var.repo_name
     description = "terraform repo"
