@@ -134,6 +134,6 @@ Notice that different providers require different information, AWS needs the reg
 
     Run `terraform plan` and `terraform apply` to create your new github repo.
 
-    ![alt text](image-7.png)
-
     Refresh your github and your new repo should appear.
+
+    ![alt text](image-7.png)
