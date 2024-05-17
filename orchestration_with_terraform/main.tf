@@ -26,10 +26,10 @@ resource "aws_vpc" "tech258-martin-vpc" {
 
 resource "aws_subnet" "public_subnet" {
   vpc_id            = aws_vpc.tech258-martin-vpc.id
-  cidr_block        = var.cidr_block_public_subnet 
-  availability_zone = var.region-az  
+  cidr_block        = var.cidr_block_public_subnet
+  availability_zone = var.region-az
   tags = {
-    Name = var.public_subnet_name_tag 
+    Name = var.public_subnet_name_tag
   }
 }
 
@@ -37,10 +37,10 @@ resource "aws_subnet" "public_subnet" {
 
 resource "aws_subnet" "private_subnet" {
   vpc_id            = aws_vpc.tech258-martin-vpc.id
-  cidr_block        = var.cidr_block_private_subnet 
-  availability_zone = var.region-az   
+  cidr_block        = var.cidr_block_private_subnet
+  availability_zone = var.region-az
   tags = {
-    Name = var.private_subnet_name_tag  # Name your private subnet here
+    Name = var.private_subnet_name_tag # Name your private subnet here
   }
 }
 
@@ -86,12 +86,12 @@ resource "aws_instance" "app_instance" {
   # which type of instance - ami
   ami = var.app_ami_id
   # t2.micro
-  subnet_id = aws_subnet.public_subnet.id
+  subnet_id     = aws_subnet.public_subnet.id
   instance_type = "t2.micro"
   # associate public ip with this instance
   associate_public_ip_address = true
 
-  key_name = var.public_key
+  key_name               = var.public_key
   vpc_security_group_ids = [aws_security_group.tech258-martin_sg_terraform.id]
 
   tags = {
@@ -103,5 +103,5 @@ resource "aws_instance" "app_instance" {
 resource "github_repository" "automated_repo" {
   name        = var.repo_name
   description = "terraform repo"
-  visibility  = "public"  # Change to "private" if needed
+  visibility  = "public" # Change to "private" if needed
 }

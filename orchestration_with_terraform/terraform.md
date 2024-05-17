@@ -33,7 +33,7 @@ On Windows search "Edit the system environment variables" and select this option
 ![alt text](images/image.png)
 
 Click this button:<br>
-![](image-1.png)
+![](images/image-1.png)
 
 Under the system variables section, click new and create 2 new environment variables:<br>
 ![alt text](images/image-2.png)<br>

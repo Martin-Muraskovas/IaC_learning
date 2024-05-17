@@ -19,7 +19,7 @@
 ## The Architecture of Ansible
 The architecture of Ansible is based on the cloud, I specifically use AWS EC2 instances.
 
-### A high level overview of Ansibles Architecure
+### A high level overview of a basic Ansible Architecure
 
 - **3 instances**:
     1. **Ansible Controller**:
