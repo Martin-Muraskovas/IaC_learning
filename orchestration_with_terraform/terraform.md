@@ -23,20 +23,20 @@ Terraform states are recognised as either **Desired** or **Current**. Changes on
 
 
 ## Diagram of Terraforms architecture
-![alt text](terraform_diagram.jpg)
+![alt text](images/terraform_diagram.jpg)
 
 ## Creating our environment variables on localhost
 - `AWS_ACCESS_KEY_ID=<KEY_ID>`
 - `AWS_SECRET_KEY=<KEY>`
 
 On Windows search "Edit the system environment variables" and select this option:<br>
-![alt text](image.png)
+![alt text](images/image.png)
 
 Click this button:<br>
 ![](image-1.png)
 
 Under the system variables section, click new and create 2 new environment variables:<br>
-![alt text](image-2.png)<br>
+![alt text](images/image-2.png)<br>
 
 ## Creating an EC2 instance on AWS using Terraform
 
@@ -84,15 +84,15 @@ To run your EC2 instance using Terraform, run the following commands:<br>
 ## Keeping your Terraform files secure
 Use the following syntax to declare variables:
 
-![alt text](image-3.png)<br>
+![alt text](images/image-3.png)<br>
 
 Use the following syntax to reference these variables in your main.tf file:
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 Add your variables file to your .gitignore file:
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 
 ## Using multiple services within Terraform
@@ -100,7 +100,7 @@ You can use multiple services at once within terraform by declaring the multiple
 
 This is the syntax to declare more than one provider in Terraform:
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 Notice that different providers require different information, AWS needs the region while github needs your Personal Access Token.
 
@@ -136,4 +136,4 @@ Notice that different providers require different information, AWS needs the reg
 
     Refresh your github and your new repo should appear.
 
-    ![alt text](image-7.png)
+    ![alt text](images/image-7.png)
