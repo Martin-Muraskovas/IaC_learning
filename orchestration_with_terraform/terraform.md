@@ -82,7 +82,7 @@ To run your EC2 instance using Terraform, run the following commands:<br>
 
 
 ## Keeping your Terraform files secure
-Use the following syntax to decalare variables:
+Use the following syntax to declare variables:
 
 ![alt text](image-3.png)<br>
 
@@ -114,7 +114,7 @@ Notice that different providers require different information, AWS needs the reg
 
 2. Provide terraform access to github.
 
-    Declare github as a provider and enter your PAT. Remember not to hardcode your PAT so use the principles outlined [here]() to safely provide your token to terraform.
+    Declare github as a provider and enter your PAT. Remember not to hardcode your PAT so use the principles outlined [here](https://github.com/Martin-Muraskovas/IaC_learning/blob/main/orchestration_with_terraform/terraform.md#keeping-your-terraform-files-secure) to safely provide your token to terraform.
 
     ```
     resource "github_repository" "automated_repo" {
