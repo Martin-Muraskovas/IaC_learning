@@ -59,7 +59,7 @@ provider "aws" {
 # which service/resource/s - ec2
 resource "aws_instance" "app_instance" {
   # which type of instance - ami
-  ami = "ami-02f0341ac93c96375"
+  ami = <YOUR_AMI>
 
   # t2.micro
   instance_type = "t2.micro"
@@ -69,7 +69,7 @@ resource "aws_instance" "app_instance" {
   
   # name the ec2/resource
   tags = {
-    Name = "martin-terraform-tech258-app"
+    Name = <YOUR_INSTANCE_NAME>
   }
 }
 ```
