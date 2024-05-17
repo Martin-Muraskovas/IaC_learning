@@ -18,6 +18,10 @@ Terraform should be used:
 ## How can we use Terraform?
 Install terraform using this [guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli). You can now use `terraform` commands on your CLI of choosing.
 
+## Desired State vs Current State
+Terraform states are recognised as either **Desired** or **Current**. Changes on AWS may not be the same as the `plan` that you have provided to terraform, however terraform is smart enough to inform you of the differences between the two states before you `apply` the new state.
+
+
 ## Diagram of Terraforms architecture
 ![alt text](terraform_diagram.jpg)
 
