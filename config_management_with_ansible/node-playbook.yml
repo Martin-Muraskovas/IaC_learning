@@ -1,0 +1,45 @@
+---
+- hosts: web
+
+  gather_facts: yes
+
+  become: yes
+
+  tasks:
+  - name: Update package lists
+    apt:
+      update_cache: yes
+
+  - name: Upgrade packages
+    apt:
+      upgrade: yes
+      autoremove: yes
+
+  - name: Installing node
+    apt: pkg=nodejs state=present
+
+#  - name: sync app to web node
+#    copy: src=/home/ubuntu/cicd_learning dest=/home/ubuntu/
+
+  - name: install the required dependencies
+    apt:
+      name: npm
+      state: latest
+  - name: Update and upgrade apt packages
+    apt:
+      upgrade: yes
+      update_cache: yes
+#  - name: install latest npm
+#    shell: |
+#      npm install -g npm@latest
+
+  - name: install pm2
+    shell: |
+      cd ~/cicd_learning/app
+      npm install -y
+      npm install pm2@4.0.0 -g
+
+  - name: run the app
+    shell: |
+      cd ~/cicd_learning/app
+      npm start &
