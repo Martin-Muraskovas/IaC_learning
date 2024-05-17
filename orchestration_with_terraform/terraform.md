@@ -96,7 +96,7 @@ Add your variables file to your .gitignore file:
 
 
 ## Using multiple services within Terraform
-You can use multiple services at once within terraform by declaring the multiple providers that you want to use, in my case I will be using github.
+You can use multiple services at once within terraform by declaring the multiple providers that you want to use, in my case I will be using github and AWS. I will create a new repo within github and I will create an EC2 instance on AWS.
 
 This is the syntax to declare more than one provider in Terraform:
 
