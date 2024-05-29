@@ -23,7 +23,7 @@ Terraform states are recognised as either **Desired** or **Current**. Changes on
 
 
 ## Diagram of Terraforms architecture
-![alt text](images/terraform_diagram.jpg)
+![alt text](image.png)
 
 ## Creating our environment variables on localhost
 - `AWS_ACCESS_KEY_ID=<KEY_ID>`

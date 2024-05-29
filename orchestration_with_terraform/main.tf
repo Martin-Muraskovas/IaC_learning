@@ -15,6 +15,7 @@ provider "github" {
 
 }
 
+
 resource "aws_vpc" "tech258-martin-vpc" {
   cidr_block = var.cidr_block_vpc
   tags = {
