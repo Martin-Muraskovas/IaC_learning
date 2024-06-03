@@ -137,3 +137,8 @@ Notice that different providers require different information, AWS needs the reg
     Refresh your github and your new repo should appear.
 
     ![alt text](images/image-7.png)
+
+
+## Remote Locking in a collaborative environment
+
+![alt text](<terraform_diagram (1).png>)
